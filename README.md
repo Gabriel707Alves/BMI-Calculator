@@ -10,7 +10,7 @@ Developed using **HTML**, **CSS**, and **JavaScript**, with a future refactor pl
 
 You can view the project here:
 
-🔗 https://art-gallery-website-six.vercel.app/
+🔗 https://bmi-calculator-obii.vercel.app/
 
 ---
 
@@ -35,6 +35,7 @@ You can view the project here:
 
 The purpose of this project is to:
 
+* Learn and practice **Javascript**
 * Practice semantic HTML structure
 * Improve CSS layout skills
 * learn and practice TAILWINDCSS
@@ -60,7 +61,7 @@ Media queries were used to ensure a smooth responsive experience.
 1. Clone this repository:
 
 ```
-git clone https://github.com/Gabriel707Alves/Art-Gallery-Website.git
+git clone https://github.com/Gabriel707Alves/BMI-Calculator.git
 ```
 
 2. Navigate to the project folder.
