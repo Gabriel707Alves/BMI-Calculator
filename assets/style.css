@@ -84,6 +84,7 @@
     background: linear-gradient(to right, white 0%, #D6E6FE 100%);
     padding: var(--spacing-400) var(--spacing-300) 0px var(--spacing-300);
     border-end-end-radius: var(--spacing-400);
+
     img {
         width: 36.72px;
         height: 36.72px;
@@ -105,4 +106,23 @@
         font: var(--text-6-regular);
         color: var(--grey-500);
     }
+}
+
+.main-calculator-content {
+    padding: var(--spacing-300);
+    margin: -110px var(--spacing-300) 0px var(--spacing-300);
+    background-color: var(--white);
+    border-radius: var(--spacing-200);
+
+    h2{
+        font: var(--text-4);
+        letter-spacing: var(--text-4-letter-spacing);
+        text-align: center;
+    }
+}
+
+.choice-box{
+    padding: var(--spacing-300) var(--spacing-300);
+    display: flex;
+    justify-content: space-between;
 }
