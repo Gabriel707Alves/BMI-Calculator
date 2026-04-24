@@ -38,77 +38,71 @@
 
     --gradient-1: #D6FCFF;
 
-    /* Text Preest 1 - Título enorme */
-    --text-1-font-family: 'Inter', sans-serif;
-    --text-1-font-weight: 600;
-    /* Semi Bold */
-    --text-1-font-size: 64px;
-    --text-1-line-height: 170%;
-    --text-1-letter-spacing: -5%;
-    /* letter-spacing não aceita % direto, convertendo para em */
-    --text-1-letter-spacing-em: -0.05em;
+    /* Fonts */
 
-    /* Text Preest 2 - Título grande */
-    --text-2-font-family: 'Inter', sans-serif;
-    --text-2-font-weight: 600;
-    /* Semi Bold */
-    --text-2-font-size: 48px;
-    --text-2-line-height: 170%;
-    --text-2-letter-spacing-em: -0.05em;
+    /* Text Preset 1 */
+    --text-1: 600 64px/1.1 "Inter", sans-serif;
+    --text-1-letter-spacing: -0.05em;
 
-    /* Text Preest 3 - Título médio */
-    --text-3-font-family: 'Inter', sans-serif;
-    --text-3-font-weight: 600;
-    /* Semi Bold */
-    --text-3-font-size: 32px;
-    --text-3-line-height: 110%;
-    --text-3-letter-spacing-em: -0.05em;
+    /* Text Preset 2 */
+    --text-2: 600 48px/1.1 "Inter", sans-serif;
+    --text-2-letter-spacing: -0.05em;
 
-    /* Text Preest 4 - Subtítulo */
-    --text-4-font-family: 'Inter', sans-serif;
-    --text-4-font-weight: 600;
-    /* Semi Bold */
-    --text-4-font-size: 24px;
-    --text-4-line-height: 120%;
-    --text-4-letter-spacing-em: -0.05em;
+    /* Text Preset 3 */
+    --text-3: 600 32px/1.1 "Inter", sans-serif;
+    --text-3-letter-spacing: -0.05em;
 
-    /* Text Preest 5 - Corpo maior */
-    --text-5-font-family: 'Inter', sans-serif;
-    --text-5-font-weight: 600;
-    /* Semi Bold */
-    --text-5-font-size: 20px;
-    --text-5-line-height: 120%;
-    --text-5-letter-spacing-em: -0.05em;
+    /* Text Preset 4 */
+    --text-4: 600 24px/1.2 "Inter", sans-serif;
+    --text-4-letter-spacing: -0.05em;
 
-    /* Text Preest 6 - Corpo Semi Bold */
-    --text-6-font-family: 'Inter', sans-serif;
-    --text-6-font-weight: 600;
-    /* Semi Bold */
-    --text-6-font-size: 16px;
-    --text-6-line-height: 150%;
-    --text-6-letter-spacing-em: 0;
+    /* Text Preset 5 */
+    --text-5: 600 20px/1.2 "Inter", sans-serif;
+    --text-5-letter-spacing: -0.05em;
 
-    /* Text Preest 7 - Corpo Bold */
-    --text-7-font-family: 'Inter', sans-serif;
-    --text-7-font-weight: 700;
-    /* Bold */
-    --text-7-font-size: 14px;
-    --text-7-line-height: 150%;
-    --text-7-letter-spacing-em: 0;
+    /* Text Preset 6 - SemiBold */
+    --text-6-semibold: 600 16px/1.5 "Inter", sans-serif;
+    --text-6-semibold-letter-spacing: 0em;
 
-    /* Text Preest 8 - Texto pequeno Regular */
-    --text-8-font-family: 'Inter', sans-serif;
-    --text-8-font-weight: 400;
-    /* Regular */
-    --text-8-font-size: 10px;
-    --text-8-line-height: 150%;
-    --text-8-letter-spacing-em: 0;
+    /* Text Preset 6 - Regular */
+    --text-6-regular: 400 16px/1.5 "Inter", sans-serif;
+    --text-6-regular-letter-spacing: 0em;
 
-    /* Text Preest 9 - Texto pequeno Bold */
-    --text-9-font-family: 'Inter', sans-serif;
-    --text-9-font-weight: 700;
-    /* Bold */
-    --text-9-font-size: 14px;
-    --text-9-line-height: 150%;
-    --text-9-letter-spacing-em: 0;
+    /* Text Preset 7 - Bold */
+    --text-7-bold: 700 14px/1.5 "Inter", sans-serif;
+    --text-7-bold-letter-spacing: 0em;
+
+    /* Text Preset 7 - Regular */
+    --text-7-regular: 400 14px/1.5 "Inter", sans-serif;
+    --text-7-regular-letter-spacing: 0em;
+}
+
+
+
+
+.header-text-content {
+    background: linear-gradient(to right, white 0%, #D6E6FE 100%);
+    padding: var(--spacing-400) var(--spacing-300) 0px var(--spacing-300);
+    border-end-end-radius: var(--spacing-400);
+    img {
+        width: 36.72px;
+        height: 36.72px;
+        display: block;
+        margin: auto;
+
+    }
+
+    h1 {
+        font: var(--text-2);
+        letter-spacing: var(--text-preset-2-letter);
+        text-align: center;
+        padding: var(--spacing-300) var(--spacing-300);
+        color: var(--blue-900);
+    }
+
+    p {
+        padding-bottom: var(--spacing-1800);
+        font: var(--text-6-regular);
+        color: var(--grey-500);
+    }
 }
