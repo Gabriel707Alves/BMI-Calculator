@@ -23,9 +23,63 @@
 
         <!-- Main BMI Calculator Content -->
         <section class="main-calculator-content">
+            <h2>Enter your details below</h2>
+            <form>
 
+                <div class="choice-box">
+                    <label>
+                        <input type="radio" name="unit" id="metric-box" checked>
+                        <span>Metric</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="unit" id="Imperial-box">
+                        <span>Imperial</span>
+                    </label>
+                </div>
+
+                <label>
+                    <!-- Height metric -->
+                    <div class="metric-height">
+                        <label>Height</label>
+                        <input type="number" name="unit" placeholder="0">
+                        <span>cm</span>
+                    </div>
+
+                    <!-- Height Imperial -->
+                    <div class="imperial-height">
+                        <input type="number" name="unit" placeholder="0">
+                        <span>in</span>
+                    </div>
+                </label>
+
+                <label>
+                    <!-- Weight metric -->
+                    <div class="weight-metric">
+                        <label>Weight</label>
+                        <input type="number" name="unit" placeholder="0">
+                        <span>kg</span>
+                    </div>
+
+                    <!-- Weight imperial -->
+                    <div class="weight-imperial">
+                        <input type="number" name="unit" placeholder="0">
+                        <span>lbs</span>
+                    </div>
+                </label>
+            </form>
+
+            <div class="bmi-result-content">
+                <div class="bmi-value">
+                    <p>Your BMI is...</p>
+                    <p>23.4</p>
+                </div>
+                <div class="bmi-discription">
+                    <p>
+                        Your BMI suggests you’re a healthy weight. Your ideal weight is between <strong>63.3kgs - 85.2kgs.</strong>
+                    </p>
+                </div>
+            </div>
         </section>
-
     </header>
 </body>
 
