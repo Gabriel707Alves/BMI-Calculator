@@ -79,7 +79,7 @@
 
 
 
-
+/* Header and hero styles */
 .header-text-content {
     background: linear-gradient(to right, white 0%, #D6E6FE 100%);
     padding: var(--spacing-400) var(--spacing-300) 0px var(--spacing-300);
@@ -108,21 +108,76 @@
     }
 }
 
+/* BMI calculator box styles */
 .main-calculator-content {
     padding: var(--spacing-300);
     margin: -110px var(--spacing-300) 0px var(--spacing-300);
     background-color: var(--white);
     border-radius: var(--spacing-200);
-
-    h2{
+    border: 1px solid ;
+    h2 {
         font: var(--text-4);
         letter-spacing: var(--text-4-letter-spacing);
         text-align: center;
     }
 }
 
-.choice-box{
+/* Choice box styles */
+.choice-box {
     padding: var(--spacing-300) var(--spacing-300);
     display: flex;
     justify-content: space-between;
+
+    font: var(--text-6-semibold);
+    letter-spacing: var(--text-6-semibold-letter-spacing);
+    color: var(--blue-900);
+}
+
+/* class for the div that disappears in the metric */
+.displayNone {
+    display: none;
+}
+
+/* class for number input fields */
+.metric-box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-100);
+    flex-wrap: wrap;
+    position: relative;
+
+    label {
+        font: var(--text-7-regular);
+        color: var(--grey-500);
+    }
+
+    input {
+        padding: var(--spacing-300);
+        border-radius: 12px;
+        border-color: var(--grey-500);
+        color: var(--blue-900);
+        font: var(--text-4);
+        max-width: 296px;
+    }
+
+    span {
+        position: absolute;
+        right: 27px;
+        top: 63%;
+        transform: translateY(-50%);
+        color: var(--blue-500);
+        font: var(--text-4);
+    }
+
+    input::placeholder{
+        color: var(--blue-900);
+    }
+}
+
+.metric-height{
+    margin-bottom: var(--spacing-200);
+}
+
+.metric-weight{
+    margin-bottom: var(--spacing-300);
 }
