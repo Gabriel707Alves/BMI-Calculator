@@ -10,7 +10,6 @@
 
 <body>
     <header class="hero">
-        <!-- Text and logo content -->
         <section class="header-text-content">
             <img src="assets/images/logo.svg" alt="logo">
             <h1>Body Mass Index Calculator</h1>
@@ -21,51 +20,58 @@
             </p>
         </section>
 
-        <!-- Main BMI Calculator Content -->
         <section class="main-calculator-content">
             <h2>Enter your details below</h2>
-            <form>
 
+            <form>
                 <div class="choice-box">
                     <label>
-                        <input type="radio" name="unit" id="metric-box" checked>
+                        <input type="radio" name="unit" checked>
                         <span>Metric</span>
                     </label>
                     <label>
-                        <input type="radio" name="unit" id="Imperial-box">
+                        <input type="radio" name="unit">
                         <span>Imperial</span>
                     </label>
                 </div>
 
-                <label>
-                    <!-- Height metric -->
-                    <div class="metric-height metric-box">
-                        <label>Height</label>
-                        <input type="number" name="unit" placeholder="0">
-                        <span>cm</span>
-                    </div>
+                <!-- HEIGHT -->
+                <div class="field-group">
+                    <p class="field-label">Height</p>
 
-                    <!-- Height Imperial -->
-                    <div class="imperial-height displayNone">
-                        <input type="number" name="unit" placeholder="0">
-                        <span>in</span>
-                    </div>
-                </label>
+                    <!-- Height Metric -->
+                    <div class="flex-fields">
+                        <div class="metric-box">
+                            <input type="number" placeholder="0">
+                            <span>cm</span>
+                        </div>
 
-                <label>
-                    <!-- Weight metric -->
-                    <div class="metric-weight metric-box">
-                        <label>Weight</label>
-                        <input type="number" name="unit" placeholder="0">
-                        <span>kg</span>
+                        <div class="metric-box">
+                            <!-- Height Imperial -->
+                            <input type="number" placeholder="0">
+                            <span>in</span>
+                        </div>
                     </div>
+                </div>
 
-                    <!-- Weight imperial -->
-                    <div class="weight-imperial displayNone">
-                        <input type="number" name="unit" placeholder="0">
-                        <span>lbs</span>
+                <!-- WEIGHT -->
+                <div class="field-group">
+                    <p class="field-label">Weight</p>
+                    
+                    <div class="flex-fields">
+                        <!-- Weight Metric -->
+                        <div class="metric-box">
+                            <input type="number" placeholder="0">
+                            <span>kg</span>
+                        </div>
+
+                        <!-- Weight Imperial -->
+                        <div class="metric-box">
+                            <input type="number" placeholder="0">
+                            <span>lbs</span>
+                        </div>
                     </div>
-                </label>
+                </div>
             </form>
 
             <div class="bmi-result-content">
@@ -73,10 +79,11 @@
                     <p>Your BMI is...</p>
                     <p>23.4</p>
                 </div>
-                <div class="bmi-discription">
+
+                <div class="bmi-description">
                     <p>
-                        Your BMI suggests you’re a healthy weight. Your ideal weight is between <strong>63.3kgs -
-                            85.2kgs.</strong>
+                        Your BMI suggests you’re a healthy weight. Your ideal weight is between
+                        <strong>63.3kgs - 85.2kgs.</strong>
                     </p>
                 </div>
             </div>
