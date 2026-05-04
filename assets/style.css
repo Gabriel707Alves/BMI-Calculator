@@ -1,12 +1,11 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
 :root {
-    /* Spacing */
     --spacing-0: 0px;
     --spacing-100: 8px;
     --spacing-200: 16px;
@@ -22,10 +21,7 @@
     --spacing-1600: 128px;
     --spacing-1800: 144px;
 
-    /* colors */
-
     --white: #FFFFFF;
-
     --black: #000000;
 
     --grey-500: #5E6E85;
@@ -38,99 +34,66 @@
 
     --gradient-1: #D6FCFF;
 
-    /* Fonts */
-
-    /* Text Preset 1 */
     --text-1: 600 64px/1.1 "Inter", sans-serif;
-    --text-1-letter-spacing: -0.05em;
-
-    /* Text Preset 2 */
     --text-2: 600 48px/1.1 "Inter", sans-serif;
-    --text-2-letter-spacing: -0.05em;
-
-    /* Text Preset 3 */
     --text-3: 600 32px/1.1 "Inter", sans-serif;
-    --text-3-letter-spacing: -0.05em;
-
-    /* Text Preset 4 */
     --text-4: 600 24px/1.2 "Inter", sans-serif;
-    --text-4-letter-spacing: -0.05em;
-
-    /* Text Preset 5 */
     --text-5: 600 20px/1.2 "Inter", sans-serif;
-    --text-5-letter-spacing: -0.05em;
 
-    /* Text Preset 6 - SemiBold */
     --text-6-semibold: 600 16px/1.5 "Inter", sans-serif;
-    --text-6-semibold-letter-spacing: 0em;
-
-    /* Text Preset 6 - Regular */
     --text-6-regular: 400 16px/1.5 "Inter", sans-serif;
-    --text-6-regular-letter-spacing: 0em;
 
-    /* Text Preset 7 - Bold */
     --text-7-bold: 700 14px/1.5 "Inter", sans-serif;
-    --text-7-bold-letter-spacing: 0em;
-
-    /* Text Preset 7 - Regular */
     --text-7-regular: 400 14px/1.5 "Inter", sans-serif;
-    --text-7-regular-letter-spacing: 0em;
 }
 
-
-
-/* Header and hero styles */
+/* HEADER */
 .header-text-content {
     background: linear-gradient(to right, white 0%, #D6E6FE 100%);
-    padding: var(--spacing-400) var(--spacing-300) 0px var(--spacing-300);
+    padding: var(--spacing-400) var(--spacing-300) 0 var(--spacing-300);
     border-end-end-radius: var(--spacing-400);
-
-    img {
-        width: 36.72px;
-        height: 36.72px;
-        display: block;
-        margin: auto;
-
-    }
-
-    h1 {
-        font: var(--text-2);
-        letter-spacing: var(--text-preset-2-letter);
-        text-align: center;
-        padding: var(--spacing-300) var(--spacing-300);
-        color: var(--blue-900);
-    }
-
-    p {
-        padding-bottom: var(--spacing-1800);
-        font: var(--text-6-regular);
-        color: var(--grey-500);
-    }
 }
 
-/* BMI calculator box styles */
+.header-text-content img {
+    width: 36px;
+    display: block;
+    margin: auto;
+}
+
+.header-text-content h1 {
+    font: var(--text-2);
+    text-align: center;
+    padding: var(--spacing-300);
+    color: var(--blue-900);
+}
+
+.header-text-content p {
+    padding-bottom: var(--spacing-1800);
+    font: var(--text-6-regular);
+    color: var(--grey-500);
+}
+
+/* CARD */
 .main-calculator-content {
     padding: var(--spacing-300);
-    margin: -110px var(--spacing-300) 0px var(--spacing-300);
+    margin: -110px var(--spacing-300) 0;
     background-color: var(--white);
     border-radius: var(--spacing-200);
     border: 1px solid;
-
-    h2 {
-        font: var(--text-4);
-        letter-spacing: var(--text-4-letter-spacing);
-        text-align: center;
-    }
 }
 
-/* Choice box styles */
+.main-calculator-content h2 {
+    font: var(--text-4);
+    text-align: center;
+    margin-bottom: var(--spacing-300);
+}
+
+/* CHOICE */
 .choice-box {
-    padding: var(--spacing-300) var(--spacing-300);
+    padding: var(--spacing-300);
     display: flex;
     justify-content: space-between;
-
     font: var(--text-6-semibold);
-    letter-spacing: var(--text-6-semibold-letter-spacing);
     color: var(--blue-900);
 }
 
@@ -149,34 +112,55 @@
 
 /* GRID DOS INPUTS */
 .flex-fields {
-    display: flex;
+    display: grid;
     gap: var(--spacing-200);
-    align-items: flex-start;
 }
 
 /* INPUT BOX */
-.metric-box {
+.input-box {
     position: relative;
-
-    span {
-        position: absolute;
-        right: 16px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--blue-500);
-        font: var(--text-4);
-    }
-
-    input {
-        padding: var(--spacing-300);
-        border-radius: 12px;
-        border: 1px solid var(--grey-500);
-        color: var(--blue-900);
-        font: var(--text-4);
-        width: 140px;
-    }
+    width: 100%;
 }
 
-.metric-box input::placeholder {
+.input-box span {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--blue-500);
+    font: var(--text-4);
+}
+
+.input-box input {
+    width: 100%;
+    padding: var(--spacing-300);
+    border-radius: 12px;
+    border: 1px solid var(--grey-500);
     color: var(--blue-900);
+    font: var(--text-4);
+}
+
+.input-box input::placeholder {
+    color: var(--blue-900);
+}
+
+/* RESULTADO */
+.bmi-result-content {
+    background-color: var(--blue-500);
+    color: white;
+    padding: var(--spacing-400);
+    border-radius: var(--spacing-200);
+}
+
+.bmi-value p {
+    font: var(--text-6-semibold);
+    margin-bottom: var(--spacing-100);
+}
+
+.bmi-value .result {
+    font: var(--text-2);
+}
+
+.bmi-description {
+    font: var(--text-7-regular);
 }

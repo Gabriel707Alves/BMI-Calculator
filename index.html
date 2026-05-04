@@ -23,70 +23,44 @@
         <section class="main-calculator-content">
             <h2>Enter your details below</h2>
 
-            <form>
-                <div class="choice-box">
-                    <label>
-                        <input type="radio" name="unit" checked>
-                        <span>Metric</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="unit">
-                        <span>Imperial</span>
-                    </label>
-                </div>
-
                 <!-- HEIGHT -->
                 <div class="field-group">
                     <p class="field-label">Height</p>
 
-                    <!-- Height Metric -->
                     <div class="flex-fields">
-                        <div class="metric-box">
+                        <div class="input-box metric-only">
                             <input type="number" placeholder="0">
                             <span>cm</span>
                         </div>
-
-                        <div class="metric-box">
-                            <!-- Height Imperial -->
-                            <input type="number" placeholder="0">
-                            <span>in</span>
-                        </div>
                     </div>
                 </div>
+
 
                 <!-- WEIGHT -->
                 <div class="field-group">
                     <p class="field-label">Weight</p>
-                    
+
                     <div class="flex-fields">
-                        <!-- Weight Metric -->
-                        <div class="metric-box">
+                        <div class="input-box metric-only">
                             <input type="number" placeholder="0">
                             <span>kg</span>
                         </div>
-
-                        <!-- Weight Imperial -->
-                        <div class="metric-box">
-                            <input type="number" placeholder="0">
-                            <span>lbs</span>
-                        </div>
                     </div>
                 </div>
-            </form>
 
-            <div class="bmi-result-content">
-                <div class="bmi-value">
-                    <p>Your BMI is...</p>
-                    <p>23.4</p>
-                </div>
+                <div class="bmi-result-content">
+                    <div class="bmi-value">
+                        <p>Your BMI is...</p>
+                        <p class="result">...</p>
+                    </div>
 
-                <div class="bmi-description">
-                    <p>
-                        Your BMI suggests you’re a healthy weight. Your ideal weight is between
-                        <strong>63.3kgs - 85.2kgs.</strong>
-                    </p>
+                    <div class="bmi-description">
+                        <p>
+                            Your BMI suggests you’re a healthy weight. Your ideal weight is between
+                            <strong>... - ...</strong>
+                        </p>
+                    </div>
                 </div>
-            </div>
         </section>
     </header>
 </body>
