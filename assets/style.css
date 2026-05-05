@@ -164,3 +164,53 @@
 .bmi-description {
     font: var(--text-7-regular);
 }
+
+
+@media(min-width: 768px){
+    .main-calculator-content{
+        max-width: 762px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-text-content{
+        p{
+            text-align: center;
+            max-width: 762px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .main-calculator-content{
+        padding: var(--spacing-400);
+
+        h2{
+            text-align: left;
+        }
+
+
+        .fields{
+            display: flex;
+            gap: var(--spacing-300);
+        }
+    }
+
+    .bmi-result-content{
+        border-top-right-radius: 999px;
+        border-bottom-right-radius: 999px;
+        border-top-left-radius: 64px;
+        border-bottom-left-radius: 64px;
+
+        display: flex;
+        justify-content: space-between;
+
+        padding: var(--spacing-400);
+
+        .bmi-description{
+            p{
+                max-width: 250px;
+            }
+        }
+    }
+}
