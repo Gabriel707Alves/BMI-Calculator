@@ -165,6 +165,21 @@
     font: var(--text-7-regular);
 }
 
+button{
+    margin-bottom: var(--spacing-200);
+    padding: var(--spacing-200);
+    border: none;
+    border-radius: var(--spacing-200);
+    background-color: var(--blue-500);
+    font: var(--text-7-regular);
+    color: white;
+}
+
+button:hover{
+    background-color: #1643e6;
+    color: white;
+}
+
 
 @media(min-width: 768px){
     .main-calculator-content{
