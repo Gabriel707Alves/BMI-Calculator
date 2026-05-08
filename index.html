@@ -5,21 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
+
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
+
+    <!-- FUNDO -->
+    <div class="bg-pattern"></div>
+
     <header class="hero">
+
+        <!-- TEXTO -->
         <section class="header-text-content">
-            <img src="assets/images/logo.svg" alt="logo">
-            <h1>Body Mass Index Calculator</h1>
-            <p>
-                Better understand your weight in relation to your height using our body mass index (BM) calculator.
-                While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to
-                evaluate your overall health and well-being.
-            </p>
+
+            <img src="assets/images/logo.svg" alt="logo" class="logo">
+
+            <div class="text-wrapper">
+
+                <h1>
+                    Body Mass Index Calculator
+                </h1>
+
+                <p>
+                    Better understand your weight in relation to your height using our body mass index (BM)
+                    calculator.
+                    While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to
+                    evaluate your overall health and well-being.
+                </p>
+
+            </div>
+
         </section>
 
+        <!-- CARD -->
         <section class="main-calculator-content">
             <h2>Enter your details below</h2>
 
@@ -47,29 +66,25 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
-            
-            <button id="btn-calc">Calcular BMI</button>
-            
+
+            <button id="btn-calc">
+                Calcular BMI
+            </button>
+
             <div class="bmi-result-content">
+
                 <div class="bmi-value">
                     <p>Your BMI is...</p>
                     <p class="result" id="result">...</p>
                 </div>
 
                 <div class="bmi-description">
-                    <p>
-                        Your BMI suggests you’re a healthy weight. Your ideal weight is between
-                        <strong>... - ...</strong>
-                    </p>
+                    <p>Your status is <p id="bmi-status">...</p> </p>
                 </div>
             </div>
-
         </section>
     </header>
-    <script src="script.js"></script>t
+    <script src="script.js"></script>
 </body>
-
 </html>
