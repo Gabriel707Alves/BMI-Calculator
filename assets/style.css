@@ -204,13 +204,13 @@ button:hover {
 }
 
 .bmi-description {
-    /* margin-top: var(--spacing-300); */
     font: var(--text-7-regular);
 
 }
 
 /* YOUR RESULTS */
 .your-results {
+    margin-bottom: var(--spacing-600);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-600);
@@ -218,6 +218,10 @@ button:hover {
 
 .results-text-container {
     padding: 0 var(--spacing-300);
+
+    img{
+        display: none;
+    }
 
     h2 {
         font: var(--text-3);
@@ -237,8 +241,32 @@ button:hover {
     }
 }
 
-/* TABLET */
+/* TIPS */
+.tips-container{
+    padding: var(--spacing-600) var(--spacing-300);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-500);
+}
 
+.tips-text-container{
+    h3{
+        margin-bottom: var(--spacing-300);
+        font: var(--text-4);
+        color: var(--blue-900);
+    }
+
+    p{
+        font: var(--text-6-regular);
+        color: var(--grey-500);
+    }
+}
+
+.icon-container{
+    margin-bottom: var(--spacing-400);
+}
+
+/* TABLET */
 @media (min-width: 768px) {
 
     .main-calculator-content {
@@ -287,11 +315,12 @@ button:hover {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-right: var(--spacing-500);
+        align-items: center;
     }
 
     .results-container {
         img {
-            margin-left: -50px;
+            
         }
     }
 
@@ -301,6 +330,21 @@ button:hover {
             font: var(--text-6-regular);
 
         }
+    }
+
+    .tips-container{
+        padding: var(--spacing-700) var(--spacing-500);
+    }
+
+    .card-container{
+        display: flex;
+        gap: var(--spacing-500);
+        align-items: center;
+    }
+
+    .icon-container{
+        margin-top: auto;
+        margin-bottom: auto;
     }
 }
 
@@ -362,8 +406,26 @@ button:hover {
     }
 
     .results-text-container {
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: var(--spacing-1600);
+        }
+
         h2 {
             font: var(--text-2);
         }
+    }
+
+    .tips-container{
+        padding: var(--spacing-1200) 0;
+        max-width: 1300px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card-container{
+        display: block;
     }
 }
