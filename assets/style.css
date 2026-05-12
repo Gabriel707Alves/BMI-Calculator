@@ -219,7 +219,7 @@ button:hover {
 .results-text-container {
     padding: 0 var(--spacing-300);
 
-    img{
+    img {
         display: none;
     }
 
@@ -242,28 +242,74 @@ button:hover {
 }
 
 /* TIPS */
-.tips-container{
+.tips-container {
     padding: var(--spacing-600) var(--spacing-300);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-500);
 }
 
-.tips-text-container{
-    h3{
+.tips-text-container {
+    h3 {
         margin-bottom: var(--spacing-300);
         font: var(--text-4);
         color: var(--blue-900);
     }
 
-    p{
+    p {
         font: var(--text-6-regular);
         color: var(--grey-500);
     }
 }
 
-.icon-container{
+.icon-container {
     margin-bottom: var(--spacing-400);
+}
+
+.limitations {
+    padding: 0px var(--spacing-300);
+
+
+}
+
+.limitations-icon-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-200);
+    margin-bottom: var(--spacing-200);
+
+    p {
+        font: var(--text-5);
+        color: var(--blue-900);
+    }
+}
+
+.card {
+    padding: var(--spacing-400);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: var(--spacing-200);
+    margin-bottom: var(--spacing-200);
+}
+
+.text-card {
+    font: var(--text-6-regular);
+    color: var(--grey-500);
+}
+
+.intro {
+    h2 {
+        font: var(--text-3);
+        text-align: center;
+        color: var(--blue-900);
+        margin-bottom: var(--spacing-400);
+    }
+
+    p {
+        font: var(--text-6-regular);
+        color: var(--grey-500);
+        text-align: center;
+        margin-bottom: var(--spacing-700);
+    }
 }
 
 /* TABLET */
@@ -296,18 +342,18 @@ button:hover {
         justify-content: space-between;
         align-items: flex-start;
         gap: var(--spacing-300);
-        
+
     }
 
-    .bmi-status{
+    .bmi-status {
         font: var(--text-6-regular);
         color: white;
     }
 
-   .bmi-status-value{
+    .bmi-status-value {
         font: var(--text-2);
         margin-bottom: var(--spacing-100);
-   }
+    }
 
     .your-results {
         margin-top: var(--spacing-1300);
@@ -318,12 +364,6 @@ button:hover {
         align-items: center;
     }
 
-    .results-container {
-        img {
-            
-        }
-    }
-
     .results-text-container {
 
         p {
@@ -332,19 +372,36 @@ button:hover {
         }
     }
 
-    .tips-container{
+    .tips-container {
         padding: var(--spacing-700) var(--spacing-500);
     }
 
-    .card-container{
+    .card-container {
         display: flex;
         gap: var(--spacing-500);
         align-items: center;
     }
 
-    .icon-container{
+    .icon-container {
         margin-top: auto;
         margin-bottom: auto;
+    }
+
+    .limitations {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .intro {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .card-race {
+        grid-column: 1 / -1;
+        margin: 0 auto;
+        margin: 0px 22%;
     }
 }
 
@@ -406,7 +463,7 @@ button:hover {
     }
 
     .results-text-container {
-        img{
+        img {
             display: block;
             margin-left: auto;
             margin-right: var(--spacing-1600);
@@ -417,7 +474,7 @@ button:hover {
         }
     }
 
-    .tips-container{
+    .tips-container {
         padding: var(--spacing-1200) 0;
         max-width: 1300px;
         margin: auto;
@@ -425,7 +482,56 @@ button:hover {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
-    .card-container{
+    .card-container {
         display: block;
+    }
+
+    .limitations {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+         grid-template-areas:
+    "area-1 area-1 area-1 area-1 area-2 area-2 area-2 ."
+    "area-1 area-1 area-1 area-1 area-2 area-2 area-2 ."
+    ". . area-4 area-4 area-4 area-3 area-3 area-3"
+    ". . area-4 area-4 area-4 area-3 area-3 area-3"
+    ". area-6 area-6 area-6 area-5 area-5 area-5 ."
+    ". area-6 area-6 area-6 area-5 area-5 area-5 .";
+        gap: 10px;
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .intro{
+         grid-area: area-1;
+         
+         h2{
+            text-align: left;
+         }
+
+         p{
+            text-align: left;
+         }
+    }
+
+    .card-gender{
+        grid-area: area-2;
+    }
+
+    .card-muscle{
+        grid-area: area-3;
+    }
+
+    .card-age{
+        grid-area: area-4;
+    }
+
+    .card-race{
+        grid-area: area-5;
+        margin: 0px;
+    }
+
+    .card-pregnancy{
+        grid-area: area-6;
     }
 }
