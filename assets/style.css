@@ -21,6 +21,9 @@
     --spacing-1600: 128px;
     --spacing-1800: 144px;
 
+    --section-gap: 56px;
+    --page-padding: 24px;
+
     --white: #FFFFFF;
 
     --grey-500: #5E6E85;
@@ -235,7 +238,10 @@ button:active { transform: translateY(0); }
 
 /* YOUR RESULTS */
 .your-results {
-    margin-bottom: var(--spacing-600);
+    width: 100%;
+    max-width: 1300px;
+    margin: var(--section-gap) auto;
+    padding-inline: var(--page-padding);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-600);
@@ -263,12 +269,15 @@ button:active { transform: translateY(0); }
 
     img {
         width: 100%;
+        border-radius: 24px;
     }
 }
 
 /* TIPS */
 .tips-container {
     padding: var(--spacing-600) var(--spacing-300);
+    max-width: 1300px;
+    margin: var(--section-gap) var(--page-padding);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-500);
@@ -294,9 +303,9 @@ button:active { transform: translateY(0); }
 }
 
 .limitations {
-    padding: 0px var(--spacing-300);
-
-
+    max-width: 1300px;
+    margin: var(--section-gap) auto 0;
+    padding: 0 var(--page-padding) var(--section-gap);
 }
 
 .limitations-icon-container {
@@ -345,6 +354,10 @@ button:active { transform: translateY(0); }
 /* TABLET */
 @media (min-width: 768px) {
 
+    :root {
+        --page-padding: 32px;
+    }
+
     .main-calculator-content {
         max-width: 800px;
         margin: auto;
@@ -386,11 +399,10 @@ button:active { transform: translateY(0); }
     }
 
     .your-results {
-        margin-top: var(--spacing-1300);
+        margin: var(--section-gap) auto;
         gap: var(--spacing-300);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        margin-right: var(--spacing-500);
         align-items: center;
     }
 
@@ -404,6 +416,7 @@ button:active { transform: translateY(0); }
 
     .tips-container {
         padding: var(--spacing-700) var(--spacing-500);
+        margin: var(--section-gap) var(--page-padding);
     }
 
     .card-container {
@@ -419,7 +432,6 @@ button:active { transform: translateY(0); }
 
     .limitations {
         display: grid;
-
         grid-template-columns: 1fr 1fr;
     }
 
@@ -480,9 +492,8 @@ button:active { transform: translateY(0); }
 
     .your-results {
         max-width: 1300px;
-        margin: auto;
+        margin: var(--section-gap) auto;
         align-items: center;
-        margin-top: 100px;
     }
 
     .results-container {
@@ -505,9 +516,9 @@ button:active { transform: translateY(0); }
     }
 
     .tips-container {
-        padding: var(--spacing-1200) 0;
+        padding: var(--spacing-1200) var(--spacing-400);
         max-width: 1300px;
-        margin: auto;
+        margin: var(--section-gap) auto;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
@@ -529,8 +540,8 @@ button:active { transform: translateY(0); }
     ". area-6 area-6 area-6 area-5 area-5 area-5 .";
         gap: 10px;
         max-width: 1300px;
-        margin: auto;
-        padding-bottom: var(--spacing-1200);
+        margin: var(--section-gap) auto 0;
+        padding-bottom: var(--section-gap);
     }
 
     .intro{
