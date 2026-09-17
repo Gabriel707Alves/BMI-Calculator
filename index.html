@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator</title>
-
+    <meta name="description" content="Calculate your BMI and understand what the result means for your health.">
+    <meta name="theme-color" content="#345ff6">
+    <title>BMI Calculator | Check your healthy weight range</title>
+    <link rel="icon" href="assets/icons/favicon-32x32.png" type="image/png">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#calculator">Skip to calculator</a>
 
     <!-- FUNDO -->
     <div class="bg-pattern"></div>
@@ -39,59 +42,61 @@
         </section>
 
         <!-- CARD -->
-        <section class="main-calculator-content">
+        <form class="main-calculator-content" id="calculator" novalidate>
             <h2>Enter your details below</h2>
 
             <div class="fields">
                 <!-- HEIGHT -->
                 <div class="field-group">
-                    <p class="field-label">Height</p>
+                    <label class="field-label" for="height">Height</label>
 
                     <div class="flex-fields">
                         <div class="input-box metric-only">
-                            <input type="number" placeholder="0" id="height">
+                            <input type="number" placeholder="0" id="height" name="height" min="50" max="250" step="0.1" inputmode="decimal" required aria-describedby="height-error">
                             <span>cm</span>
                         </div>
                     </div>
+                    <small class="field-error" id="height-error"></small>
                 </div>
 
                 <!-- WEIGHT -->
                 <div class="field-group">
-                    <p class="field-label">Weight</p>
+                    <label class="field-label" for="weight">Weight</label>
 
                     <div class="flex-fields">
                         <div class="input-box metric-only">
-                            <input type="number" placeholder="0" id="weight">
+                            <input type="number" placeholder="0" id="weight" name="weight" min="20" max="400" step="0.1" inputmode="decimal" required aria-describedby="weight-error">
                             <span>kg</span>
                         </div>
                     </div>
+                    <small class="field-error" id="weight-error"></small>
                 </div>
             </div>
 
-            <button id="btn-calc">
+            <button id="btn-calc" type="submit">
                 Calcular BMI
             </button>
 
-            <div class="bmi-result-content">
+            <div class="bmi-result-content" aria-live="polite">
 
                 <div class="bmi-value">
                     <p>Your BMI is...</p>
-                    <p class="result" id="result">...</p>
+                    <p class="result" id="result">—</p>
                 </div>
 
                 <div class="bmi-description">
-                    <p class="bmi-status">Your status is...
-                    <p id="bmi-status-value" class="bmi-status-value">...</p>
-                    </p>
+                    <p class="bmi-status">Your status is...</p>
+                    <p id="bmi-status-value" class="bmi-status-value">Enter your details</p>
+                    <p id="healthy-range" class="healthy-range"></p>
                 </div>
             </div>
-        </section>
+        </form>
     </header>
 
     <!-- YOUR RESULTS -->
     <section class="your-results">
         <div class="results-container">
-            <img src="assets/images/image-man-eating.webp" class="image-container">
+            <img src="assets/images/image-man-eating.webp" class="image-container" alt="Man enjoying a healthy meal">
         </div>
         <div class="results-text-container">
             <img src="assets/images/pattern-curved-line-left.svg" alt="">
@@ -110,7 +115,7 @@
         <!-- Healthy Eating Container-->
         <div class="card-container">
             <div class="icon-container">
-                <img src="assets/icons/icon-eating.svg">
+                <img src="assets/icons/icon-eating.svg" alt="" aria-hidden="true">
             </div>
 
             <div class="tips-text-container">
@@ -125,7 +130,7 @@
         <!-- Regular Exercise Container -->
         <div class="card-container">
             <div class="icon-container">
-                <img src="assets/icons/icon-exercise.svg">
+                <img src="assets/icons/icon-exercise.svg" alt="" aria-hidden="true">
             </div>
 
             <div class="tips-text-container">
@@ -140,7 +145,7 @@
         <!-- Adequate sleep Container -->
         <div class="card-container">
             <div class="icon-container">
-                <img src="assets/icons/icon-sleep.svg">
+                <img src="assets/icons/icon-sleep.svg" alt="" aria-hidden="true">
             </div>
 
             <div class="tips-text-container">
@@ -168,7 +173,7 @@
 
         <div class="card-gender card">
             <div class="limitations-icon-container">
-                <img src="assets/icons/icon-gender.svg">
+                <img src="assets/icons/icon-gender.svg" alt="" aria-hidden="true">
                 <p>Gender</p>
             </div>
             <p class="text-card">
@@ -179,7 +184,7 @@
 
         <div class="card-age card">
             <div class="limitations-icon-container">
-                <img src="assets/icons/icon-age.svg">
+                <img src="assets/icons/icon-age.svg" alt="" aria-hidden="true">
                 <p>Age</p>
 
             </div>
@@ -191,7 +196,7 @@
 
         <div class="card-muscle card">
             <div class="limitations-icon-container">
-                <img src="assets/icons/icon-muscle.svg">
+                <img src="assets/icons/icon-muscle.svg" alt="" aria-hidden="true">
                 <p>Muscle</p>
             </div>
             <p class="text-card">
@@ -202,8 +207,8 @@
 
         <div class="card-pregnancy card">
             <div class="limitations-icon-container">
-                <img src="assets/icons/icon-pregnancy.svg">
-                <p>Pregancy</p>
+                <img src="assets/icons/icon-pregnancy.svg" alt="" aria-hidden="true">
+                <p>Pregnancy</p>
             </div>
             <p class="text-card">
                 Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy
@@ -213,7 +218,7 @@
 
         <div class="card-race card">
             <div class="limitations-icon-container">
-                <img src="assets/icons/icon-race.svg">
+                <img src="assets/icons/icon-race.svg" alt="" aria-hidden="true">
                 <p>Race</p>
             </div>
             <p class="text-card">
@@ -223,6 +228,9 @@
         </div>
 
     </section>
+    <footer class="site-footer">
+        <p>BMI Calculator · Results are informational and do not replace medical advice.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 
