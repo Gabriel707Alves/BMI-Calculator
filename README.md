@@ -1,8 +1,7 @@
 ## 📊 BMI Calculator Landing Page
 
-A simple and responsive landing page that allows users to calculate their Body Mass Index (BMI) based on weight and height inputs.
-Built to practice core front-end skills, including DOM manipulation and event handling with JavaScript.
-Developed using **HTML**, **CSS**, and **JavaScript**, with a future refactor planned using **Tailwind CSS**.
+A responsive landing page that calculates Body Mass Index (BMI), displays the user's classification and estimates a healthy weight range based on their height.
+Built to practice form validation, DOM manipulation and event handling with JavaScript.
 
 ---
 
@@ -25,7 +24,6 @@ You can view the project here:
 * **HTML5**
 * **CSS3**
 * **Javascript**
-* **TAILWINDCSS**
 * **Responsive Design**
 * **Mobile-First Layout**
 
@@ -35,12 +33,22 @@ You can view the project here:
 
 The purpose of this project is to:
 
-* Learn and practice **Javascript**
+* Learn and practice **JavaScript**
 * Practice semantic HTML structure
 * Improve CSS layout skills
-* learn and practice TAILWINDCSS
 * Build a **fully responsive landing page**
 * Follow basic **front-end best practices**
+
+---
+
+## ✅ Features
+
+* BMI calculation using metric measurements
+* Validation for empty, zero and out-of-range values
+* BMI classification with a personalized healthy weight range
+* Keyboard-friendly form submission
+* Accessible error and result feedback
+* Smooth visual transitions with reduced-motion support
 
 ---
 
@@ -67,12 +75,6 @@ git clone https://github.com/Gabriel707Alves/BMI-Calculator.git
 2. Navigate to the project folder.
 
 3. Open the `index.html` file in your browser.
-
----
-
-## ✨ Future Improvements
-
-* future plan for code refactoring using **Tailwind CSS**
 
 ---
 
